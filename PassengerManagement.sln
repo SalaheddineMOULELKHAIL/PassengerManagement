@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.34031.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerManagement", "PassengerManagement\PassengerManagement.csproj", "{4952FF18-562B-4C8A-8FFA-48B595509634}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassengerManagement", "PassengerManagement\PassengerManagement.csproj", "{4952FF18-562B-4C8A-8FFA-48B595509634}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerManagement.Tests", "PassengerManagement.Tests\PassengerManagement.Tests.csproj", "{7DAFF0D1-4F7D-430C-A4E8-2DBD2ADF66DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassengerManagement.Tests", "PassengerManagement.Tests\PassengerManagement.Tests.csproj", "{7DAFF0D1-4F7D-430C-A4E8-2DBD2ADF66DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassengerManagement.Batch", "PassengerManagement.Batch\PassengerManagement.Batch.csproj", "{F409FBD4-E14A-46F9-8305-57246E9A8D02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7DAFF0D1-4F7D-430C-A4E8-2DBD2ADF66DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DAFF0D1-4F7D-430C-A4E8-2DBD2ADF66DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DAFF0D1-4F7D-430C-A4E8-2DBD2ADF66DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F409FBD4-E14A-46F9-8305-57246E9A8D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F409FBD4-E14A-46F9-8305-57246E9A8D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F409FBD4-E14A-46F9-8305-57246E9A8D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F409FBD4-E14A-46F9-8305-57246E9A8D02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
