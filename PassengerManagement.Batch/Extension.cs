@@ -27,14 +27,20 @@ namespace PassengerManagement.Batch
         /// <returns>The list of passenger</returns>
         public static IList<Passenger> GetPassengers()
         {
-            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string path = Path.Combine(baseDirectory, "Passengers\\Passengers.txt");
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                "Passengers\\Passengers.txt");
+
+            if (!File.Exists(path))
+            {
+                path = Path.Combine("/Passengers/Passengers.txt");
+            }
+
             string[] lines = File.ReadAllLines(path);
             List<Passenger> passengers = new();
             bool isFirstLine = true;
             foreach (string line in lines)
             {
-                if(isFirstLine)
+                if (isFirstLine)
                 {
                     isFirstLine = false;
                     continue;
