@@ -1,0 +1,12 @@
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\bin\Debug\net5.0\PassengerManagement.deps.json
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\bin\Debug\net5.0\PassengerManagement.dll
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\bin\Debug\net5.0\ref\PassengerManagement.dll
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\bin\Debug\net5.0\PassengerManagement.pdb
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.csproj.AssemblyReference.cache
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.AssemblyInfoInputs.cache
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.AssemblyInfo.cs
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.csproj.CoreCompileInputs.cache
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.dll
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\ref\PassengerManagement.dll
+C:\Users\SalaheddineMOULELKHA\source\repos\PassengerManagement\PassengerManagement\obj\Debug\net5.0\PassengerManagement.pdb
