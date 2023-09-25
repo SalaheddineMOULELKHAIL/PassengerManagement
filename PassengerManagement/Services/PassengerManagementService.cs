@@ -73,7 +73,7 @@ namespace PassengerManagement.Services
                 }
                 else
                 {
-                    if (!CheckAndUpdateSelectedFamiies(families, ref availablePlace, selectedFamilies))
+                    if (!CheckAndUpdateSelectedFamilies(families, ref availablePlace, selectedFamilies))
                     {
                         break;
                     }
@@ -91,7 +91,7 @@ namespace PassengerManagement.Services
         /// <param name="families">The families</param>
         /// <param name="availablePlace">available places</param>
         /// <param name="selectedFamilies">selected families</param>
-        private bool CheckAndUpdateSelectedFamiies(List<Family> families, ref int availablePlace, List<Family> selectedFamilies)
+        private bool CheckAndUpdateSelectedFamilies(List<Family> families, ref int availablePlace, List<Family> selectedFamilies)
         {
             bool isSelectedFamiliesUpdated = false;
 
