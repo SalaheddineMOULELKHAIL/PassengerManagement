@@ -15,6 +15,8 @@ namespace PassengerManagement.Tests
         {
             var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
             var service = new PassengerManagementService(logger);
+
+            //Arrange
             var passengers = GetPassengers();
 
             var families = passengers.GroupBy(p => p.FamilyName)
@@ -24,11 +26,12 @@ namespace PassengerManagement.Tests
                                          Members = group.ToList()
                                      })
                                      .ToList();
-
             int availablePlace = 20;
 
+            //Act
             var result = service.GetOptimizedTurnover(families, availablePlace);
 
+            //Assert
             decimal expected = 4500;
             Assert.Equal(expected, result);
         }
@@ -38,6 +41,8 @@ namespace PassengerManagement.Tests
         {
             var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
             var service = new PassengerManagementService(logger);
+
+            // Arrange
             var passengers = new List<Passenger> {
                 new Passenger { Id = 1, Age = 35, NeedTwoPlaces = false, FamilyName = "A" },
                 new Passenger { Id = 2, Age = 32, NeedTwoPlaces = false, FamilyName = "A" },
@@ -53,11 +58,12 @@ namespace PassengerManagement.Tests
                                          Members = group.ToList()
                                      })
                                      .ToList();
-
             int availablePlace = 4;
 
+            // Act
             var result = service.GetOptimizedTurnover(families, availablePlace);
 
+            // Assert
             decimal expected = 650;
             Assert.Equal(expected, result);
         }
