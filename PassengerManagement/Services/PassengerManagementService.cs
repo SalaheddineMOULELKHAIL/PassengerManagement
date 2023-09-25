@@ -73,11 +73,7 @@ namespace PassengerManagement.Services
                 }
                 else
                 {
-                    bool isChecked = false;
-                    CombineFamiliesWithSelectedFamily(families, ref availablePlace, 
-                        selectedFamilies, ref isChecked);
-
-                    if (!isChecked)
+                    if (!CombineFamiliesWithSelectedFamilies(families, ref availablePlace, selectedFamilies))
                     {
                         break;
                     }
@@ -96,15 +92,17 @@ namespace PassengerManagement.Services
         /// <param name="availablePlace">available places</param>
         /// <param name="selectedFamilies">selected families</param>
         /// <param name="isChecked">is chicked</param>
-        private void CombineFamiliesWithSelectedFamily(List<Family> families, ref int availablePlace, List<Family> selectedFamilies,
-            ref bool isChecked)
+        private bool CombineFamiliesWithSelectedFamilies(List<Family> families, ref int availablePlace, List<Family> selectedFamilies)
         {
+            bool isSelectedFamiliesUpdated = false;
+
             foreach (var family in new List<Family>(families))
             {
                 var selectedFamilyToRemove = selectedFamilies.Where(f => f.TotalPrice < family.TotalPrice).OrderBy(f => f.TotalPrice);
                 decimal sumTotalPlace = 0;
                 int availablePlaceAdded = availablePlace;
                 List<Family> familiesToRemove = new();
+
                 foreach (var familySelected in selectedFamilyToRemove)
                 {
                     if (sumTotalPlace <= family.TotalPrice)
@@ -120,9 +118,11 @@ namespace PassengerManagement.Services
                     families.InsertRange(1, familiesToRemove);
                     selectedFamilies.RemoveAll(f => familiesToRemove.Any(fr => fr.Name == f.Name));
                     availablePlace = availablePlaceAdded;
-                    isChecked = true;
+                    isSelectedFamiliesUpdated = true;
                 }
             }
+
+            return isSelectedFamiliesUpdated;
         }
     }
 }

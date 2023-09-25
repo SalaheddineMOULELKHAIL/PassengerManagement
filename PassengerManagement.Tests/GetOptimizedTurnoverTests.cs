@@ -11,7 +11,7 @@ namespace PassengerManagement.Tests
     public class GetOptimizedTurnoverTests
     {
         [Fact]
-        public void GetOptimizedTurnover_Success()
+        public void GetOptimizedTurnover_WithoutCombine_Success()
         {
             var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
             var service = new PassengerManagementService(logger);
@@ -30,6 +30,35 @@ namespace PassengerManagement.Tests
             var result = service.GetOptimizedTurnover(families, availablePlace);
 
             decimal expected = 4500;
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void GetOptimizedTurnover_WithCombine_Success()
+        {
+            var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
+            var service = new PassengerManagementService(logger);
+            var passengers = new List<Passenger> {
+                new Passenger { Id = 1, Age = 35, NeedTwoPlaces = false, FamilyName = "A" },
+                new Passenger { Id = 2, Age = 32, NeedTwoPlaces = false, FamilyName = "A" },
+                new Passenger { Id = 3, Age = 7, NeedTwoPlaces = false, FamilyName = "A" },
+                new Passenger { Id = 5, Age = 45, NeedTwoPlaces = false, FamilyName = "B" },
+                new Passenger { Id = 6, Age = 10, NeedTwoPlaces = false, FamilyName = "B" },
+            };
+
+            var families = passengers.GroupBy(p => p.FamilyName)
+                                     .Select(group => new Family
+                                     {
+                                         Name = group.Key,
+                                         Members = group.ToList()
+                                     })
+                                     .ToList();
+
+            int availablePlace = 4;
+
+            var result = service.GetOptimizedTurnover(families, availablePlace);
+
+            decimal expected = 650;
             Assert.Equal(expected, result);
         }
 
