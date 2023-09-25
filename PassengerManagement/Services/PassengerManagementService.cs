@@ -55,6 +55,11 @@ namespace PassengerManagement.Services
         {
             _logger.LogInformation("Start to calculate optimized turnover");
 
+            if(families == null || !families.Any() || availablePlace == 0)
+            {
+                return 0;
+            }
+
             families = families.OrderBy(family => family.TotalPlace)
                     .ThenByDescending(family => family.TotalPrice)
                     .ToList();
