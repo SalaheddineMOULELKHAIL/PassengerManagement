@@ -1,4 +1,4 @@
-ID,Type,Age,Famille,Nécessite,2,places
+ID,Type,Age,Famille,Nécessite2places
 1,Adulte,35,A,Non
 2,Adulte,32,A,Non
 3,Enfant,7,A,Non
