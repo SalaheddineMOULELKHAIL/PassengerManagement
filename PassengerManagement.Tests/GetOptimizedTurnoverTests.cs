@@ -11,7 +11,7 @@ namespace PassengerManagement.Tests
     public class GetOptimizedTurnoverTests
     {
         [Fact]
-        public void GetOptimizedTurnover_WithoutCombine_Success()
+        public void GetOptimizedTurnover_WithoutCheckSelectedFamilies_Success()
         {
             var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
             var service = new PassengerManagementService(logger);
@@ -34,7 +34,7 @@ namespace PassengerManagement.Tests
         }
 
         [Fact]
-        public void GetOptimizedTurnover_WithCombine_Success()
+        public void GetOptimizedTurnover_WithCheckSelectedFamilies_Success()
         {
             var logger = new Mock<ILogger<IPassengerManagementService>>().Object;
             var service = new PassengerManagementService(logger);
