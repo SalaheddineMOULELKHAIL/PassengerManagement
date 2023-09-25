@@ -91,7 +91,6 @@ namespace PassengerManagement.Services
         /// <param name="families">The families</param>
         /// <param name="availablePlace">available places</param>
         /// <param name="selectedFamilies">selected families</param>
-        /// <param name="isChecked">is chicked</param>
         private bool CheckAndUpdateSelectedFamiies(List<Family> families, ref int availablePlace, List<Family> selectedFamilies)
         {
             bool isSelectedFamiliesUpdated = false;
